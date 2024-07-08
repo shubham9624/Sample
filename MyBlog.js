@@ -30,10 +30,12 @@ function addBlog(blog) {
     newBlogContent.textContent = blog.content;
     newBlogPost.appendChild(newBlogContent);
 
-  // create a new div with className blog-buttons and append it to newBox
+  // created a new div with className blog-buttons and append it to newBox
   const btnDiv=document.createElement('div');
   btnDiv.classList.add('blog-buttons');
   
+    // moveup button with class blog-button and move-up
+  //Added event listerner to moveup button
  const btnM = document.createElement('button');
   btnM.classList.add('blog-button', 'move-up');
   btnM.textContent = 'Move Up';
@@ -45,7 +47,8 @@ function addBlog(blog) {
           parent.insertBefore(newBox, prev);
       }
   });
-  
+   //Created movedown button with class blog-button and move-down
+  //Added event listerner to movedown button
   const btnD = document.createElement('button');
   btnD.classList.add('blog-button', 'move-down');
   btnD.textContent = 'Move Down';
@@ -58,6 +61,9 @@ function addBlog(blog) {
       }
   });
   
+  
+  //Created delete button with class blog-button and delete
+  //Added event listerner to delete button
   const btnDel = document.createElement('button');
   btnDel.classList.add('blog-button', 'delete');
   btnDel.textContent = 'Delete';
@@ -69,23 +75,8 @@ function addBlog(blog) {
   newBox.appendChild(btnDiv);
   
 
-  
-  
-  
-
-  //Create moveup button with class blog-button and move-up
-  //Add event listerner to moveup button
-
-  //Create movedown button with class blog-button and move-down
-  //Add event listerner to movedown button
-
-
-  //Create delete button with class blog-button and delete
-  //Add event listerner to delete button
-
     blogList.appendChild(newBox);
 
-  // Add event listeners to the buttons
 }
 
 const blogData = [
